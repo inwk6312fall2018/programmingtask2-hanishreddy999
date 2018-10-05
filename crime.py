@@ -1,7 +1,7 @@
 
 from tabulate import tabulate   #to print the output in table format
 def crime_list(a):               #function definition
-	file=open("a","r")   #open csv file in read mode
+	file=open(a,"r")   #open csv file in read mode
 	c1=dict()
 	c2=dict()
 	lst1=[]
@@ -12,12 +12,12 @@ def crime_list(a):               #function definition
 			lst1.append(lines[-1])
 			lst2.append(lines[-2])
 	for b in lst1:
-		if b not in c:
+		if b not in c1:
 			c1[b]=1
 		else:
 			c1[b]=c1[b]+1
 	for c in lst2:
-		if c not in d:
+		if c not in c2:
 			c2[c]=1
 		else:
 			c2[c]=c2[c]+1
